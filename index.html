@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- link to fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link to favicon -->
+    <link rel="icon" href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design">
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Video Background -->
+    <video class="video-background" loop muted autoplay >
+    <source src="time.mp4" ></source>
+        
+    </video>
+    <div class="video-overlay"></div>
+    <!-- container -->
+    <div class="container">
+        <!-- Input -->
+        <div class="input-container" id="input-container" >
+            <h1>Create Custom Countdown!</h1>
+            <form class="form" id="countdownForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="what are you counting down to?">
+                <label for="date-picker"Select a Date></label>
+                <input type="date" id="date-picker">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!--Countdown -->
+        <div class="countdown" id="countdown" hidden>
+            <h1 id="countdown-title"></h1>
+            <ul>
+                <li><span></span>Days</li>
+                <li><span></span>Hours</li>
+                <li><span></span>Minutes</li>
+                <li><span></span>Seconds</li>
+            </ul>
+            <button id="countdown-button">Reset</button>
+        </div>
+        <!-- Complete -->
+        <div class="complete" id="complete" hidden>
+            <h1 class="complete-title">Countdown Complete!</h1>
+            <h1 id="complete-info"></h1>
+            <button id="complete-button">New Countdown</button>
+        </div>
+
+        
+    </div>
+
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
