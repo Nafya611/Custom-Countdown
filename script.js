@@ -46,7 +46,7 @@ if(countdownDate){
   if(distance<0){
     countdownEl.hidden=true;
     
-    completeElInfo.textContent=`${countdownTitle}finished on ${countdownDate}`;
+    completeElInfo.textContent=`${countdownTitle} finished on ${countdownDate}`;
     clearInterval(countdownActive);
     completeEl.hidden=false;
        
