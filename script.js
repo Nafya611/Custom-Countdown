@@ -15,6 +15,7 @@ let countdownDate='';
 let countdownValue= new Date();
 let countdownActive;
 let savedCountdown;
+let audio=new Audio('ring.mp3');
 
 const second=1000;
 const minute=second*60;
@@ -49,6 +50,8 @@ if(countdownDate){
     completeElInfo.textContent=`${countdownTitle} finished on ${countdownDate}`;
     clearInterval(countdownActive);
     completeEl.hidden=false;
+    //playing ringtone
+    audio.play();
        
   }else{
     // show countdown in progress
@@ -98,6 +101,9 @@ clearInterval(countdownActive);
 countdownTitle='';
 countdownDate='';
 localStorage.removeItem('countdown');
+  //pause audio playing
+  audio.pause();
+                                  
 
 
 }
